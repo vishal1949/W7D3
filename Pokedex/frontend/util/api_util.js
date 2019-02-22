@@ -1,8 +1,14 @@
-const fetchAllPokemon = () => {
+export const fetchAllPokemon = () => {
   return $.ajax({
     method: "GET",
     url: "api/pokemon"
   });
 }
 
-export default fetchAllPokemon;
+export const fetchPokemon = (id) => {
+  return $.ajax({
+    method: "GET",
+    url: `api/pokemon/${id}`
+  })
+}
+
